@@ -20,3 +20,10 @@ class Telemetry(BaseModel):
     engine_hours: int
     state: VehicleState
     source_vendor: Literal["A", "B", "C"]
+
+class Alert(BaseModel):
+    rule: str
+    severity: Literal["warning", "danger", "anomaly"]
+    message: str
+    vehicle_id: str
+    timestamp: str
